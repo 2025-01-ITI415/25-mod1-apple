@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class AppleTree : MonoBehaviour
 {
-    [Header("Set in Inspector")]
-    //Prefab for instantiating apples
+    [Header("Set In Inspector")]
     public GameObject applePrefab;
 
     //Apple Tree speed
@@ -15,13 +14,25 @@ public class AppleTree : MonoBehaviour
     public float leftAndRightEdge = 20f;
 
     //Chance that the AppleTree will chance direction
-    public float chanceToChangeDirection = 0.1f;
+    public float changeDirChance = 0.1f;
+
+// Second between apple drop instantiations
+    public float appleDropDelay = 1f;
+
+    public GameObject ApplePrefab { get => applePrefab; set => applePrefab = value; }
 
 
     // Start is called before the first frame update
     void Start()
     {
         //Apples dropping every second
+        Invoke("DropApple", 2f);
+    }
+
+    void DropApple(){
+        GameObject apple = Instantiate<GameObject>( ApplePrefab );
+        apple.transform.position = transform.position;
+        Invoke( "DropApple", appleDropDelay );
     }
 
     // Update is called once per frame
@@ -39,7 +50,7 @@ public class AppleTree : MonoBehaviour
         } 
     }
     void FixedUpdate(){
-        if (Random.value < chanceToChangeDirection){
+        if (Random.value < changeDirChance){
             speed *= -1;
         }
     }
