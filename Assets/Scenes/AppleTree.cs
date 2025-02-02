@@ -2,30 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AppleTree : MonoBehaviour
-{
-//Prefab for instantiatin the appple
-public GameObject applePrefab;
+public class AppleTree : MonoBehaviour{
+    [Header("Set in Inspector")]
 
-//Speed that the Tree moves in m/s
-public float speed = 1f;
+    public GameObject applePrefab;
 
-//Distance where apple tree turns around
-//I dont understand what this function does is it like the switch ways?
-public float leftAndRightEdge =10f;
+    public float    speed =1f;
 
-//Chance that the tree will change directions
-public float chanceToChangeDirection
+    public float    leftAndRightEdge = 10f;
 
-//Rate at which the apples will be created
-public float SecondsBetweenAppleDrop
+    public float chanceToChangeDirections = 0.1f;
 
-void Start() {
-    //Dropping Apples every second
-}
+    public float secondsBetweenAppleDrops = 1f;
 
-void Update(){
-    //Basic Movement 
-    //Changing Directions
-}
+    void Start(){
+        Invoke("DropApple", 2f);
+
+    }
+
+    void DropApple(){
+        GameObject apple =Instantiate<GameObject>(applePrefab);
+        apple.transform.position = transform.position;
+        Invoke("DropApple", secondsBetweenAppleDrops);
+    }
+
+    void Update(){
+        Vector3 pos = transform.position;
+        pos.x += speed * Time.deltaTime;
+        transform.position = pos;
+
+        if(pos.x < -leftAndRightEdge) {
+            speed = Mathf.Abs(speed);
+        }
+        else if (pos.x > leftAndRightEdge){
+            speed = -Mathf.Abs(speed);
+        }
+
+        //else if (Random.value < chanceToChangeDirections){
+        //    speed*= -1;
+        //}
+    }
+    void FixedUpdate(){
+        if (Random.value < chanceToChangeDirections){
+                speed *= -1;
+            }
+        }
 }
