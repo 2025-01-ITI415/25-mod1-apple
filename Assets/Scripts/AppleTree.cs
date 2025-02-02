@@ -7,7 +7,6 @@ public class AppleTree : MonoBehaviour
     [Header ("Set in Inspector")]
     
     // Prefab for instantiating apples
-
     public GameObject applePrefab;
 
     //Speed at which the AppleTree moves
@@ -20,24 +19,41 @@ public class AppleTree : MonoBehaviour
 
     // Chance that the AppleTree will change direction
 
-    public float chanceToChangeDirection
+    public float chanceToChangeDirection = .01f;
 
     // Rate at which Apples will be instantiated
 
-    public float secondsBetweenAppleDrop
+    public float secondsBetweenAppleDrop = 1f;
 
 
     // Start is called before the first frame update
     void Start()
     {
         // Dropping apples every second
+
+        Invoke("DropApple", 2f);
     }
 
+    void DropApple(){
+        GameObject apple = Instantiate < GameObject;
+        apple.transform.position = transform.position;
+        Invoke("DropApple", secondsBetweenAppleDrop);
+    }
     // Update is called once per frame
     void Update()
     {
         // Basic Movement
+        Vector3 pos = transform.position;
+        pos.x += speed * Time.deltaTime;
+        transform.position = pos;
 
         // Changing Direction   
+        if (pos.x < -leftAndRightEdge) {
+            speed = Mathf.Abs(speed); // move right
+        } else if (pos.x > leftAndRightEdge) {
+            speed = -Mathf.Abs(speed); // move left
+        } else if (Random.value < chanceToChangeDirection) {
+            speed *= -1; // Change direction
+        }
     }
 }
