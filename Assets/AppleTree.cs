@@ -22,11 +22,18 @@ public class AppleTree : MonoBehaviour
      public float appleDropDelay = 1f;
 
      void Start()
-    {
-         // Start dropping apples                                           // b
+     {
+        // Start dropping apples                                           // b
+        Invoke("DropApple", 2f);
      }
 
-     void Update()
+     void DropApple()
+     {                                                    // b
+     GameObject apple = Instantiate<GameObject>(applePrefab);        // c
+     apple.transform.position = transform.position;                    // d
+     Invoke("DropApple", appleDropDelay);                            // e
+     }
+    void Update()
     {
         // Basic Movement                                                  // b
          Vector3 pos = transform.position;                        // b

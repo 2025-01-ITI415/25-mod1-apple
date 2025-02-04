@@ -316,9 +316,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1944897322610750448, guid: c6d3d9015bdcd6a499f679669f132f00, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 3106133863015860927, guid: 4ee9e83dbe2b1c0438587f72d5a783df, type: 3}
     - target: {fileID: 748266551346709976, guid: c6d3d9015bdcd6a499f679669f132f00, type: 3}
       propertyPath: m_Name
       value: AppleTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703255196941305786, guid: c6d3d9015bdcd6a499f679669f132f00, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7399660624644120062, guid: c6d3d9015bdcd6a499f679669f132f00, type: 3}
       propertyPath: m_LocalPosition.x
