@@ -28,10 +28,30 @@ public class AppleTree : MonoBehaviour
 
      void Update()
     {
-         // Basic Movement                                                  // b
+        // Basic Movement                                                  // b
          Vector3 pos = transform.position;                        // b
          pos.x += speed * Time.deltaTime;                         // c
          transform.position = pos;
         // Changing Direction                                              // b
+         if (pos.x < -leftAndRightEdge)
+         {                                        // a
+         speed = Mathf.Abs(speed);   // Move right                           // b
+         }
+         else if (pos.x > leftAndRightEdge)
+         {                                  // c
+         speed = -Mathf.Abs(speed);  // Move left                            // c
+         //}
+         //else if (Random.value < changeDirChance)
+         //{                         // a
+         //speed *= -1;  // Change direction                                  // b
+         }
     }
- }
+    void FixedUpdate()
+    {                                                 // b
+         // Random direction changes are now time-based due to FixedUpdate()
+         if (Random.value < changeDirChance)
+         {                          // b
+         speed *= -1; // Change direction 
+         }
+     }
+}
