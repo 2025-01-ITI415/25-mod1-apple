@@ -316,13 +316,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8368037055429967070, guid: d9b0d3d30dd111647a746f1518dc71df, type: 3}
+      propertyPath: applePreFab
+      value: 
+      objectReference: {fileID: 867477132597573552, guid: d9b0d3d30dd111647a746f1518dc71df, type: 3}
+    - target: {fileID: -8368037055429967070, guid: d9b0d3d30dd111647a746f1518dc71df, type: 3}
+      propertyPath: changeDirChance
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 594028280377053471, guid: d9b0d3d30dd111647a746f1518dc71df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 594028280377053471, guid: d9b0d3d30dd111647a746f1518dc71df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 594028280377053471, guid: d9b0d3d30dd111647a746f1518dc71df, type: 3}
       propertyPath: m_LocalPosition.z
