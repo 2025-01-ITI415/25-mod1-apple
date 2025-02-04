@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3579043447307740022}
   - component: {fileID: 2827418638406907931}
   - component: {fileID: 2181972710569443379}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fruit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4090022497145794113}
   - component: {fileID: 2085615683246793172}
-  m_Layer: 0
+  - component: {fileID: -6492693423826429828}
+  m_Layer: 9
   m_Name: Apple
   m_TagString: Apple
   m_Icon: {fileID: 0}
@@ -166,6 +167,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-6492693423826429828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573208921092896381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03d791869be575844b611e522de6e7eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6659116163792378420
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +191,7 @@ GameObject:
   - component: {fileID: 2527674494357179747}
   - component: {fileID: 2643740414358776017}
   - component: {fileID: 6336917322268691890}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Stem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
