@@ -325,6 +325,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6953619694495361582, guid: 3c8defad502d34a3da945a27a1ce413e, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 3094215631823303705, guid: 0105c7958bb3148f680779515a00b27f, type: 3}
+    - target: {fileID: 6953619694495361582, guid: 3c8defad502d34a3da945a27a1ce413e, type: 3}
       propertyPath: changeDirChance
       value: 0.02
       objectReference: {fileID: 0}
@@ -367,6 +371,10 @@ PrefabInstance:
     - target: {fileID: 6988122925619190123, guid: 3c8defad502d34a3da945a27a1ce413e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307441727187012031, guid: 3c8defad502d34a3da945a27a1ce413e, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
