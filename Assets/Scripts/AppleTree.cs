@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AppleTree : MonoBehaviour {
     [Header("Inscribed")]
-    // a
     // Prefab for instantiating apples
     public GameObject applePrefab;
 
@@ -21,9 +20,15 @@ public class AppleTree : MonoBehaviour {
     public float appleDropDelay = 1f;
 
     void Start () {
-    // Start dropping apples
-    // b
+        Invoke( "DropApple", 2f );
     }
+    void DropApple() {
+        GameObject apple = Instantiate<GameObject>(
+        applePrefab ); 
+        apple.transform.position = transform.position;
+        Invoke( "DropApple", appleDropDelay );
+    }
+
 
     void Update () {
         // Basic Movement
