@@ -6,7 +6,7 @@ using UnityEngine.UI; // We need this line for uGUI to work.
 public class HighScore : MonoBehaviour
 {
     static private Text _UI_TEXT;
-    static private int _SCORE = 1000;
+    static private int _SCORE = 0;
 
     private Text txtCom; // txtCom is a reference to this GO’s Text component
 
@@ -43,8 +43,8 @@ public class HighScore : MonoBehaviour
     void OnDrawGizmos() {
         if ( resetHighScoreNow ) {
             resetHighScoreNow = false;
-            PlayerPrefs.SetInt( "HighScore", 1000 );
-            Debug.LogWarning( "PlayerPrefs HighScore reset to 1,000." );
+            PlayerPrefs.SetInt( "HighScore", 0 );
+            Debug.LogWarning( "PlayerPrefs HighScore reset to 0." );
         }
     }
 }
