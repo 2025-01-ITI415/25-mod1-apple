@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Apple
+  - Golden Apple
+  - Poison Apple
   layers:
   - Default
   - TransparentFX
@@ -16,9 +18,9 @@ TagManager:
   - 
   - AppleTree
   - Apple
+  - GoldenApple
+  - PoisonApple
   - Basket
-  - 
-  - 
   - 
   - 
   - 

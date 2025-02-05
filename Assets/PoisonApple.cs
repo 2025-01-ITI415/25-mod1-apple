@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Apple : MonoBehaviour
+public class PoisonApple : MonoBehaviour
 {
     public static float bottomY = -20f;
 
@@ -15,7 +15,7 @@ public class Apple : MonoBehaviour
             // Get a reference to the ApplePicker component of Main Camera
             ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
             // Call the public AppleMissed() method of apScript
-            apScript.AppleMissed(isRedApple: true);
+            apScript.AppleMissed(isRedApple: false);
         }
     }
 }

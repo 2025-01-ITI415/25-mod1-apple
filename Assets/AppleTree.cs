@@ -5,9 +5,11 @@ using UnityEngine;
 public class AppleTree : MonoBehaviour
 {
     [Header("Inscribed")]
-// a
+
     // Prefab for instantiating apples
     public GameObject applePrefab;
+    public GameObject goldenApplePrefab;
+    public GameObject poisonApplePrefab;
 
     // Speed at which the AppleTree moves
     public float speed = 1f;
@@ -27,16 +29,22 @@ public class AppleTree : MonoBehaviour
     {
         // Start dropping apples
         Invoke( "DropApple", 2f );
-// a
     }
 
     void DropApple() {
-// b
-        GameObject apple = Instantiate<GameObject>( applePrefab ); // c
-        apple.transform.position = transform.position;
-// d
-        Invoke( "DropApple", appleDropDelay );
-// e
+        if ( Random.value <= 0.7 ) {
+            GameObject apple = Instantiate<GameObject>( applePrefab );
+            apple.transform.position = transform.position;
+            Invoke( "DropApple", appleDropDelay );
+        } else if ( Random.value > 0.7 && Random.value < 0.9 ) {
+            GameObject goldenApple = Instantiate<GameObject>( goldenApplePrefab );
+            goldenApple.transform.position = transform.position;
+            Invoke( "DropApple", appleDropDelay );
+        } else {
+            GameObject poisonApple = Instantiate<GameObject>( poisonApplePrefab );
+            poisonApple.transform.position = transform.position;
+            Invoke( "DropApple", appleDropDelay );
+        }
     }
 
     // Update is called once per frame
@@ -44,11 +52,8 @@ public class AppleTree : MonoBehaviour
     {
         // Basic Movement
         Vector3 pos = transform.position;
-// b
         pos.x += speed * Time.deltaTime;
-// c
         transform.position = pos;
-// d
 
         // Changing Direction
         if ( pos.x < -leftAndRightEdge ) {
@@ -56,17 +61,13 @@ public class AppleTree : MonoBehaviour
         } else if ( pos.x > leftAndRightEdge ) {
             speed = -Mathf.Abs( speed ); // Move left
         // } else if ( Random.value < changeDirChance ) {
-// a
         //     speed *= -1; // Change direction
-// a
         }
     }
 
     void FixedUpdate() {
-// b
         // Random direction changes are now time-based due to FixedUpdate()
         if ( Random.value < changeDirChance ) {
-// b
             speed *= -1; // Change direction
         }
     }
