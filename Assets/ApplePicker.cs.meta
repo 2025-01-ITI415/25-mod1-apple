@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - basketPrefab: {instanceID: 0}
+  - basketPrefab: {fileID: 5130093449335396098, guid: 0fe266927f024d040bde24a5d6a67c59, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

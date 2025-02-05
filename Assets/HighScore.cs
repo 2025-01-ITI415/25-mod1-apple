@@ -7,6 +7,7 @@ using TMPro;
 public class HighScore : MonoBehaviour
 {
     static public int score = 1000;
+    private TextMeshProUGUI scoreText;
     private void Awake()
     {
         //if the playerprefs highscore already exists,read it
@@ -21,18 +22,24 @@ public class HighScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreText = GetComponent<TextMeshProUGUI>();
+        UpdateHighScoreText();
     }
 
     // Update is called once per frame
     void Update()
     {
-        TextMeshProUGUI gt =this.GetComponent<TextMeshProUGUI>();
-        gt.text = "HighScore:" + score;
-        //update the playerprefs highscore if necessary
         if (score > PlayerPrefs.GetInt("HighScore"))
         {
-            PlayerPrefs.SetInt("HighScore",score);
+            PlayerPrefs.SetInt("HighScore", score);
+            UpdateHighScoreText();
+        }
+    }
+    void UpdateHighScoreText()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "HighScore: " + score;
         }
     }
 }
