@@ -742,7 +742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8363417844764148154, guid: 9b5021d53d8a3a94f8f936fd00e4cd32, type: 3}
       propertyPath: secondsBetweenGoldAppleDrops
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8959822636103942034, guid: 9b5021d53d8a3a94f8f936fd00e4cd32, type: 3}
       propertyPath: m_IsKinematic
