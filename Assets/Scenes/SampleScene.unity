@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -308,6 +309,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fbbde4c8b4a734096e4fd1e691766f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basketPreFab: {fileID: 6806599081430961202, guid: 0d9e63c2505642e419cdb33486c0585f, type: 3}
+  numbaskets: 3
+  basketBottomY: -14
+  basketSpacingY: 2
 --- !u!1001 &8533098386851784818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -367,6 +384,22 @@ PrefabInstance:
     - target: {fileID: 867477132597573552, guid: d9b0d3d30dd111647a746f1518dc71df, type: 3}
       propertyPath: m_Name
       value: AppleTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 867477132597573552, guid: d9b0d3d30dd111647a746f1518dc71df, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093347220472908050, guid: d9b0d3d30dd111647a746f1518dc71df, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638519616181130750, guid: d9b0d3d30dd111647a746f1518dc71df, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451567080778331837, guid: d9b0d3d30dd111647a746f1518dc71df, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
