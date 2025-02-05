@@ -38,8 +38,10 @@ public class Basket : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision coll){
+
         // Find out what hit this basket
         GameObject collideWith = coll.gameObject;
+
         if (collideWith.tag == "Apple"){
             Destroy(collideWith);
             // Parse the text of the scoreGT into an int
@@ -53,5 +55,20 @@ public class Basket : MonoBehaviour
                 HighScore.score = score;
             }
         }
+        // Gold apples
+        if (collideWith.tag == "GoldApple"){
+            Destroy(collideWith);
+            // Parse the text of the scoreGT into an int
+            int score = int.Parse(scoreGT.text);
+            // Add points for catching the apple
+            score += 200;
+            // Convert the score back to a string and display it
+            scoreGT.text = score.ToString();
+            // Track the high score
+            if(score > HighScore.score){
+                HighScore.score = score;
+            }
+        }
+
     }
 }

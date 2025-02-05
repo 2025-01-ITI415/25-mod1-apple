@@ -729,12 +729,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7010446578815254440, guid: 4e0e6b76f684d5847984f47d18b79844, type: 3}
     - target: {fileID: 8363417844764148154, guid: 9b5021d53d8a3a94f8f936fd00e4cd32, type: 3}
+      propertyPath: goldApplePrefab
+      value: 
+      objectReference: {fileID: 7010446578815254440, guid: d4f8f40d1269f8642959e2c04883083d, type: 3}
+    - target: {fileID: 8363417844764148154, guid: 9b5021d53d8a3a94f8f936fd00e4cd32, type: 3}
       propertyPath: leftAndRightEdge
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8363417844764148154, guid: 9b5021d53d8a3a94f8f936fd00e4cd32, type: 3}
       propertyPath: chanceToChangeDirections
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363417844764148154, guid: 9b5021d53d8a3a94f8f936fd00e4cd32, type: 3}
+      propertyPath: secondsBetweenGoldAppleDrops
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8959822636103942034, guid: 9b5021d53d8a3a94f8f936fd00e4cd32, type: 3}
       propertyPath: m_IsKinematic
