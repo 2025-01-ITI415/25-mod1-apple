@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1126810940298462994}
   - component: {fileID: 8283994098082812116}
   - component: {fileID: 8609008824866567427}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 3118933045648408616}
   - component: {fileID: 8164265086598406750}
   - component: {fileID: 8979136545005165094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 3254128010107163883}
   - component: {fileID: 291276018481147534}
   - component: {fileID: 4002565923153777622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stem (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 6054445824611462601}
   - component: {fileID: 6101628255324461881}
   - component: {fileID: 9211808587715067724}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 6177413953310005409}
   - component: {fileID: 3955673941335355694}
   - component: {fileID: 6413618429783209194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stem (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 3247045505732983392}
   - component: {fileID: 1998974806776310998}
   - component: {fileID: 4256536926554423792}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Apple (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 9102786016576545947}
   - component: {fileID: 9104421921272126578}
   - component: {fileID: 7221554629973489996}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaf (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 314727751249127168}
   - component: {fileID: 1682981135956781179}
   - component: {fileID: 5895643111852205169}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Apple (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,7 +860,7 @@ GameObject:
   - component: {fileID: 3017172957728371270}
   - component: {fileID: 2313374031402785066}
   - component: {fileID: 7951397170620105814}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaves (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -965,7 +965,7 @@ GameObject:
   - component: {fileID: 693139739243235222}
   - component: {fileID: 3554402904473483897}
   - component: {fileID: 8112756390535189767}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaves (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1068,7 +1068,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4212941306634816722}
   - component: {fileID: 8959822636103942034}
-  m_Layer: 0
+  - component: {fileID: 8363417844764148154}
+  m_Layer: 8
   m_Name: AppleTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1130,6 +1131,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8363417844764148154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6640315274528435602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6220c060cbb370b4fb83b5aad3a19f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applePrefab: {fileID: 0}
+  speed: 1
+  leftAndRightEdge: 10
+  chanceToChangeDirections: 0.1
+  secondsBetweenAppleDrops: 1
 --- !u!1 &7202105787660614398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1160,7 @@ GameObject:
   - component: {fileID: 4050025067667604965}
   - component: {fileID: 44610173401704632}
   - component: {fileID: 9146985238814327498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1247,7 +1265,7 @@ GameObject:
   - component: {fileID: 7098933829614531981}
   - component: {fileID: 1472035786553633546}
   - component: {fileID: 7755679194407052486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1352,7 +1370,7 @@ GameObject:
   - component: {fileID: 7649291394191902366}
   - component: {fileID: 4540642653633774151}
   - component: {fileID: 8271867106671582655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaf (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

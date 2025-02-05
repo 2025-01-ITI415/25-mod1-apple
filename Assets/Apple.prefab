@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6032195245998213205}
   - component: {fileID: 6997478004008766193}
   - component: {fileID: 5085097503152441627}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Stem (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 1220642462866051049}
   - component: {fileID: 6076735677151430632}
   - component: {fileID: 1321752222691461056}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Leaf (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,8 @@ GameObject:
   - component: {fileID: 4931117385133006945}
   - component: {fileID: 2957286611437337771}
   - component: {fileID: 551925115573466187}
-  m_Layer: 0
+  - component: {fileID: -6201071817473041526}
+  m_Layer: 9
   m_Name: Apple
   m_TagString: Apple
   m_Icon: {fileID: 0}
@@ -240,7 +241,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7010446578815254440}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 2, y: 0.67, z: 4.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -248,7 +249,7 @@ Transform:
   - {fileID: 848347339485298550}
   - {fileID: 3572805159887734821}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &5956473330597662445
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -347,3 +348,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-6201071817473041526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010446578815254440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b1757d44a86d141839ee4847da594f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
