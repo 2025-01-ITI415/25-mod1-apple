@@ -25,7 +25,7 @@ public class ApplePicker : MonoBehaviour
         }
     }
 
-    public void AppleMissed(bool isRedApple) {
+    public void AppleMissed( bool isRedApple ) {
         // Destroy all of the falling Apples
         GameObject[] appleArray=GameObject.FindGameObjectsWithTag("Apple");
         GameObject[] goldenAppleArray=GameObject.FindGameObjectsWithTag("Golden Apple");
