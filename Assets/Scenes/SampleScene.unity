@@ -319,7 +319,7 @@ PrefabInstance:
     - target: {fileID: -8368037055429967070, guid: d9b0d3d30dd111647a746f1518dc71df, type: 3}
       propertyPath: applePreFab
       value: 
-      objectReference: {fileID: 867477132597573552, guid: d9b0d3d30dd111647a746f1518dc71df, type: 3}
+      objectReference: {fileID: 3374454099207727140, guid: e6e38e0684f5b0c438fd7b87fc566284, type: 3}
     - target: {fileID: -8368037055429967070, guid: d9b0d3d30dd111647a746f1518dc71df, type: 3}
       propertyPath: changeDirChance
       value: 0.02
