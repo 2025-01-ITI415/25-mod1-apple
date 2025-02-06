@@ -23,8 +23,19 @@
          // Start dropping apples                                           // b
      }
 
-     void Update () {
-        // Basic Movement                                                  // b
-        // Changing Direction                                              // b
+       void Update () {
+         // Basic Movement
+         Vector3 pos = transform.position;                        // b
+        pos.x += speed * Time.deltaTime;                         // c
+         transform.position = pos;                                // d
+
+         // Changing Direction
+         if ( pos.x < -leftAndRightEdge ) {                                        // a
+             speed = Mathf.Abs( speed );   // Move right                           // b
+         } else if ( pos.x > leftAndRightEdge ) {                                  // c
+             speed = -Mathf.Abs( speed );  // Move left                            // c
+         } else if ( Random.value < changeDirChance ) {                         // a
+             speed *= -1;  // Change direction                                  // b
+         }
      }
  }

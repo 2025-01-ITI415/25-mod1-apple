@@ -585,13 +585,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2326587760869293632, guid: 7b3edf6e4951ea440b0c78e89888253a, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -2326587760869293632, guid: 7b3edf6e4951ea440b0c78e89888253a, type: 3}
+      propertyPath: changeDirChance
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 8568534433800142708, guid: 7b3edf6e4951ea440b0c78e89888253a, type: 3}
       propertyPath: m_Name
       value: AppleTree
       objectReference: {fileID: 0}
     - target: {fileID: 8967388574238244729, guid: 7b3edf6e4951ea440b0c78e89888253a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.145
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8967388574238244729, guid: 7b3edf6e4951ea440b0c78e89888253a, type: 3}
       propertyPath: m_LocalPosition.y
