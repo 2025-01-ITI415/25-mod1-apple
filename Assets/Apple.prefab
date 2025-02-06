@@ -117,6 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6967826880262973950}
   - component: {fileID: 6847979185689868315}
+  - component: {fileID: 5101932974472757452}
   m_Layer: 9
   m_Name: Apple
   m_TagString: Orange
@@ -168,6 +169,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5101932974472757452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6619256239302667367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be74ec951339c494c8153e2998afe184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9014710059115763853
 GameObject:
   m_ObjectHideFlags: 0
