@@ -20,9 +20,15 @@
      public float        appleDropDelay = 1f;
 
     void Start () {
-         // Start dropping apples                                           // b
+         // Start dropping apples
+         Invoke("DropApple",2f);
+                                                    
      }
-
+          void DropApple() {                                                    // b
+         GameObject apple = Instantiate<GameObject>( applePrefab );        // c
+         apple.transform.position = transform.position;                    // d
+         Invoke( "DropApple", appleDropDelay );                            // e
+     }
        void Update () {
          // Basic Movement
          Vector3 pos = transform.position;                        // b
@@ -36,6 +42,12 @@
              speed = -Mathf.Abs( speed );  // Move left                            // c
          } else if ( Random.value < changeDirChance ) {                         // a
              speed *= -1;  // Change direction                                  // b
+         }
+     }
+     void FixedUpdate() {                                                 // b
+         // Random direction changes are now time-based due to FixedUpdate()
+         if ( Random.value < changeDirChance ) {                          // b
+             speed *= -1; // Change direction 
          }
      }
  }
