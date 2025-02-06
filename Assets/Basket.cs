@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using static UnityEditor.PlayerSettings;
 
 public class Basket : MonoBehaviour
 {
+    public ScoreCounter scoreCounter;
     // Start is called before the first frame update
     void Start()
     {
-        
+      // Find a GameObject named ScoreCounter in the Scene Hierarchy
+      GameObject scoreGO = GameObject.Find("ScoreCounter");         // b
+      // Get the ScoreCounter (Script) component of scoreGO
+      scoreCounter = scoreGO.GetComponent<ScoreCounter>();            // c
     }
 
     // Update is called once per frame
@@ -36,7 +41,9 @@ public class Basket : MonoBehaviour
      GameObject collidedWith = coll.gameObject;                        // b
      if (collidedWith.CompareTag("Apple"))
      {                         // c
-     Destroy(collidedWith);
-         }
+       Destroy(collidedWith);
+      // Increase the score
+       scoreCounter.score += 100;
      }
+    }
 }
