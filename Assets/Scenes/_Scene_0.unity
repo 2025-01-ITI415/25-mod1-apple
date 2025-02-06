@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 15837633}
   - component: {fileID: 15837635}
   - component: {fileID: 15837634}
+  - component: {fileID: 15837636}
   m_Layer: 5
   m_Name: HighScore
   m_TagString: Untagged
@@ -201,6 +202,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15837632}
   m_CullTransparentMesh: 1
+--- !u!114 &15837636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15837632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1ffe6debf9f62429b09c01b95088a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetHighScoreNow: 0
 --- !u!1 &563219920
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,38 +377,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &864984593 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 752302534998911923, guid: fb1dd9c43f4241f4d859d4136c8c212b, type: 3}
-  m_PrefabInstance: {fileID: 714315969864550670}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &864984596
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864984593}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +516,7 @@ GameObject:
   - component: {fileID: 1599006146}
   - component: {fileID: 1599006148}
   - component: {fileID: 1599006147}
+  - component: {fileID: 1599006149}
   m_Layer: 5
   m_Name: ScoreCounter
   m_TagString: Untagged
@@ -602,6 +585,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599006145}
   m_CullTransparentMesh: 1
+--- !u!114 &1599006149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599006145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045a89af6d39a6e4f80e6d9b85565b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1976184488
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,14 +708,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -2149885573175903245, guid: fb1dd9c43f4241f4d859d4136c8c212b, type: 3}
-      propertyPath: applePrefab
-      value: 
-      objectReference: {fileID: 5048160224478462151, guid: 5fa53c6bb3f911a46b6ef62f2bf067b5, type: 3}
-    - target: {fileID: -2149885573175903245, guid: fb1dd9c43f4241f4d859d4136c8c212b, type: 3}
-      propertyPath: leftAndRightEdge
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 752302534998911923, guid: fb1dd9c43f4241f4d859d4136c8c212b, type: 3}
       propertyPath: m_Name
       value: AppleTree
@@ -768,10 +755,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 752302534998911923, guid: fb1dd9c43f4241f4d859d4136c8c212b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 864984596}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb1dd9c43f4241f4d859d4136c8c212b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

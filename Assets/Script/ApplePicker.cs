@@ -12,11 +12,9 @@ public class ApplePicker : MonoBehaviour
     public float basketSpacingY = 2f;
     public List<GameObject> basketList;
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        basketList = new List<GameObject>();
+       basketList = new List<GameObject>();
         for (int i=0; i <numBaskets; i++) {
             GameObject tBasketGO = Instantiate<GameObject>( basketPrefab );
             Vector3 pos = Vector3.zero;
