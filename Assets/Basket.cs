@@ -39,11 +39,12 @@ public class Basket : MonoBehaviour
     {                             // a
      // Find out what hit this basket
      GameObject collidedWith = coll.gameObject;                        // b
-     if (collidedWith.CompareTag("Apple"))
-     {                         // c
-       Destroy(collidedWith);
-      // Increase the score
-       scoreCounter.score += 100;
-     }
+        if (collidedWith.CompareTag("Apple"))
+        {                         // c
+            Destroy(collidedWith);
+            // Increase the score
+            scoreCounter.score += 100;
+            HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
+        }
     }
 }
