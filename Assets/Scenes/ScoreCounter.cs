@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScoreCounter : MonoBehaviour
 {
     [Header("Dynamic")]
-    public int score = 1000;
+    public int score = 0;
     private Text uiText;
 
     // Start is called before the first frame update
