@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6033609865233284055}
   - component: {fileID: 3843588818628855849}
   - component: {fileID: 1998877694945733391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaves 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 441702192201907188}
   - component: {fileID: 3664500942864109830}
   - component: {fileID: 4449360517693651593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 4630052884853346024}
   - component: {fileID: 457683400660390394}
   - component: {fileID: 683145119922784404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaves 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 5806042126134787779}
   - component: {fileID: 7039353107541038477}
   - component: {fileID: 2772215902082138118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaves 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3275806335337486107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 1648312809229842243}
   - component: {fileID: 1574952617565581412}
   - component: {fileID: 561026428819356456}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AppleTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,4 +534,4 @@ MonoBehaviour:
   speed: 1
   leftAndRightEdge: 10
   chanceToChangeDirections: 0.1
-  secondsBetweenOrangeDrops: 1
+  secondsBetweenAppleDrops: 1

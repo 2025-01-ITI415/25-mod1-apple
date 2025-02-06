@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2897487857570253813}
   - component: {fileID: 5309212409249153675}
   - component: {fileID: 997768579329548113}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Leaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,8 +117,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6967826880262973950}
   - component: {fileID: 6847979185689868315}
-  m_Layer: 0
-  m_Name: Orange
+  m_Layer: 9
+  m_Name: Apple
   m_TagString: Orange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 5996911883876633935}
   - component: {fileID: 8996224643063294789}
   - component: {fileID: 52787669541538870}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Apple, Questionable
   m_TagString: Untagged
   m_Icon: {fileID: 0}

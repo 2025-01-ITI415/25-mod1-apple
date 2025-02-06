@@ -17,26 +17,47 @@ public class AppleTree : MonoBehaviour
     // Chance that the AppleTree will change directions
     public float        chanceToChangeDirections = 0.1f;
 
-    // Rate at which Oranges will be instantiated
-    public float        secondsBetweenOrangeDrops = 1f;
+    // Rate at which Apple will be instantiated
+    public float        secondsBetweenAppleDrops = 1f;
 
     // Start is called before the first frame update
     void Start()
-    { // Dropping oranges every second
-        
+    { // Dropping apples every second
+        Invoke( "DropApple", 2f );
     }
+
+    void DropApple() { 
+        GameObject apple = Instantiate<GameObject>(applePrefab);
+
+        apple.transform.position = transform.position;
+
+        Invoke( "DropApple", secondsBetweenAppleDrops);
+     }
 
     // Update is called once per frame
     void Update()
     { 
-    // Basic Movement
+      // Basic Movement
 
-    Vector3 pos = transform.position;
+     Vector3 pos = transform.position;
 
-    pos.x += speed * Time.deltaTime;
+     pos.z += speed * Time.deltaTime; // Due to my camera's orientation, I changed to z direction
 
-    transform.position = pos;
+     transform.position = pos;
+     
+     // Changing Direction
+     if ( pos.z < -leftAndRightEdge ) {
+            speed = Mathf.Abs(speed); // Move right
+     } else if ( pos.z > leftAndRightEdge ) {
+            speed = -Mathf.Abs(speed); // Move left
+     } 
+    }
+    void FixedUpdate() {
 
-    // Changing Direction
+        // Changing Direction Randomly is now t
+
+        if ( Random.value < chanceToChangeDirections ) {
+            speed *= -1; // Change direction
+        }
     }
 }

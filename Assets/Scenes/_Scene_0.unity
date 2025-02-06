@@ -317,8 +317,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 561026428819356456, guid: 1c8db13fa09eb044f8c8fe14d70b1bd5, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 561026428819356456, guid: 1c8db13fa09eb044f8c8fe14d70b1bd5, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 6619256239302667367, guid: 6233fee068bb3e345aea3dcedce6e5af, type: 3}
+    - target: {fileID: 561026428819356456, guid: 1c8db13fa09eb044f8c8fe14d70b1bd5, type: 3}
       propertyPath: leftAndRightEdge
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 561026428819356456, guid: 1c8db13fa09eb044f8c8fe14d70b1bd5, type: 3}
+      propertyPath: chanceToChangeDirections
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574952617565581412, guid: 1c8db13fa09eb044f8c8fe14d70b1bd5, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1648312809229842243, guid: 1c8db13fa09eb044f8c8fe14d70b1bd5, type: 3}
       propertyPath: m_LocalPosition.x
