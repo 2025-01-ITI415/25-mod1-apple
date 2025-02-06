@@ -31,6 +31,13 @@ public class ApplePicker : MonoBehaviour
         foreach ( GameObject tempGO in appleArray ) {
             Destroy( tempGO );
         }
+
+        GameObject[] goldApples = GameObject.FindGameObjectsWithTag("Gold Apple");
+        foreach (GameObject tempGO in goldApples)
+        {
+            Destroy(tempGO);
+        }
+
         int basketIndex = basketList.Count -1;
         GameObject basketGO = basketList[basketIndex];
         basketList.RemoveAt( basketIndex );
