@@ -6,12 +6,12 @@ using TMPro;
 
 public class HighScore : MonoBehaviour
 {
-    static private TextMeshPro _UI_TEXT;
+    static private TextMeshProUGUI _UI_TEXT;
     static private int _SCORE = 1000;
-    private TextMeshPro txtCom;
+    private TextMeshProUGUI txtCom;
 
     void Awake () {
-        _UI_TEXT = GetComponent<TextMeshPro>();
+        _UI_TEXT = GetComponent<TextMeshProUGUI>();
         if (PlayerPrefs.HasKey("HighScore")) {
             SCORE = PlayerPrefs.GetInt("HighScore");
         }

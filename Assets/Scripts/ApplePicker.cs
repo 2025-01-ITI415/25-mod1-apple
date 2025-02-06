@@ -17,6 +17,7 @@ public class ApplePicker : MonoBehaviour
     void Start()
     {
         basketList = new List<GameObject>();
+        // !!! should i change this to a while loop so after there are no baskets, the tree stops moving/ making apples
         for (int i=0; i <numBaskets; i++) {
             GameObject tBasketGO = Instantiate<GameObject>( basketPrefab );
             Vector3 pos = Vector3.zero;
@@ -38,11 +39,5 @@ public class ApplePicker : MonoBehaviour
         if ( basketList.Count == 0 ) {
             SceneManager.LoadScene( "_Scene_0" );
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
