@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class HighScore : MonoBehaviour
 {
@@ -20,7 +20,7 @@ public class HighScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Text gt = this.GetComponent<Text>();
+        TextMeshProUGUI gt = this.GetComponent<TextMeshProUGUI>();
         gt.text = "High Score: "+score;
 
         // Update the PlayerPrefs HighScore if necessary
