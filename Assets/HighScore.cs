@@ -10,7 +10,7 @@ public class HighScore : MonoBehaviour
 
     private Text txtCom; // txtCom is a reference to this GO's text component
 
-    void Awake ()
+    void Awake()
     {
         _UI_TEXT = GetComponent<Text>();
 
@@ -37,7 +37,7 @@ public class HighScore : MonoBehaviour
         }
     }
 
-    static public void TRY_SET_HIGH_SCORE( int scoreToTry )
+    static public void TRY_SET_HIGH_SCORE(int scoreToTry)
     {
         if (scoreToTry <= SCORE) return; // if scoreToTry is too low, return
         SCORE = scoreToTry;
@@ -48,7 +48,7 @@ public class HighScore : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if( resetHighScoreNow)
+        if (resetHighScoreNow)
         {
             resetHighScoreNow = false;
             PlayerPrefs.SetInt("HighScore", 1000);
