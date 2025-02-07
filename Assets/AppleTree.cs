@@ -7,7 +7,7 @@ public class AppleTree : MonoBehaviour
     [Header("Inscribed")]
     //Prefab for instantiating apples
     public GameObject applePrefab;
-
+  
 
     // Speed at which the AppleTree moves
     public float speed = 1f;
@@ -20,7 +20,7 @@ public class AppleTree : MonoBehaviour
 
     // Seconds between Apples instantiations
     public float appleDropDelay = 1f;
-    public float goldenappleDropDelay = 1f;
+
 
     // Start is called before the first frame update
     void Start()
