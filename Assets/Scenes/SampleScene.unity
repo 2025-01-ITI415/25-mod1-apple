@@ -409,6 +409,10 @@ PrefabInstance:
       propertyPath: applePrefab
       value: 
       objectReference: {fileID: 6643058166070177196, guid: 4491ed0d351134f599c6a0d3ba7842ec, type: 3}
+    - target: {fileID: 474431310278634696, guid: 688b335bba176424a829c8835b4cef78, type: 3}
+      propertyPath: goldenapplePrefab
+      value: 
+      objectReference: {fileID: 7155043419127434178, guid: 025e9bf7b7bb14767a541a52ff25f5c0, type: 3}
     - target: {fileID: 476362729115226370, guid: 688b335bba176424a829c8835b4cef78, type: 3}
       propertyPath: m_Layer
       value: 8

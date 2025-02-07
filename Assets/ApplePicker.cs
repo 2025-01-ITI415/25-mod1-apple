@@ -32,6 +32,11 @@ public class ApplePicker : MonoBehaviour
         {
             Destroy(tempGO);
         }
+        GameObject[] goldenappleArray = GameObject.FindGameObjectsWithTag("GoldenApple");
+        foreach (GameObject tempGO in goldenappleArray)
+        {
+            Destroy(tempGO);
+        }
         // Destory one of the Baskets
         // Get the index of the last Basket in basketList
         int basketIndex = basketList.Count -1;

@@ -35,8 +35,8 @@ public class AppleTree : MonoBehaviour
         apple.transform.position = transform.position;
         Invoke("DropApple", appleDropDelay);
 
-        GameObject Goldenapple = Instantiate<GameObject>(goldenapplePrefab);
-        Goldenapple.transform.position = transform.position;
+        GameObject goldenapple = Instantiate<GameObject>(goldenapplePrefab);
+        goldenapple.transform.position = transform.position;
         Invoke("DropApple", goldenappleDropDelay);
     }
 
