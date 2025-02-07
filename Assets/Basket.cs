@@ -7,7 +7,10 @@ public class Basket : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Find a GameObject named ScoreCounter in the Scene Hierarchy
+        GameObject scoreGO = GameObject.Find("ScoreCounter");
+        // Get the ScoreCounter (Script) compent of scoreGO
+        ScoreCounter = scoreGO.GetComponent<ScoreCounter>();
     }
 
     // Update is called once per frame
@@ -28,5 +31,15 @@ public class Basket : MonoBehaviour
         Vector3 pos = this.transform.position;
         pos.x = mousePos3D.x;
         this.transform.position = pos;
+    }
+    void OnCollisionEnter( Collision coll )
+    {
+        //Find out what hit this basktet
+        GameObject collidedWith = coll.gameObject;
+        if(collidedWith.CompareTag("Apple"))
+        {
+            Destroy(collidedWith);
+            ScoreCounter.score += 100;
+        }
     }
 }
