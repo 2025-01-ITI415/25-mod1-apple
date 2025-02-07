@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Basket : MonoBehaviour
 {
     [Header("Set Dynamically")]
     public TextMeshProUGUI     Text;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +24,13 @@ public class Basket : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        // Get the current screen psoition of the mouse from Input
+    {       
+        // added line of script calling the unityengine.scenemanagement
+        // which notices once the game swaps to _scene_0 to then have the 
+        // baskets move along with the cursor. this avoids the basket moving
+        // on the title screen!
+       if ( SceneManager.GetActiveScene().name == "_Scene_0" ){
+        // Get the current screen psotion of the mouse from Input
         Vector3 mousePos2D = Input.mousePosition;
 
         // The Camera's z position sets how far to push the mouse into 3D
@@ -35,21 +41,28 @@ public class Basket : MonoBehaviour
         
         // Move the z position of this basket to the z position of the Mouse
         Vector3 pos = this.transform.position;
-        pos.z = mousePos3D.z;
-        this.transform.position = pos;
-    }
+         pos.z = mousePos3D.z;
+         this.transform.position = pos; }
+         }
 
     void OnCollisionEnter ( Collision coll ) {
         // Find out what hit this basket
         GameObject collidedWith = coll.gameObject;
-        if ( collidedWith.tag == "Apple" ) {
+        if ( collidedWith.tag == "Apple" || collidedWith.tag == "Golden" || collidedWith.tag == "Poison" ) {
             Destroy( collidedWith );
 
             // parse the text of scoreGT into an int
             int score = int.Parse( Text.text );
 
             // Add points for catching the apple
-            score += 100;
+            if ( collidedWith.tag == "Apple" ){
+              score += 100;
+            } else if ( collidedWith.tag == "Golden" ){
+                score += 300;
+            } else if ( collidedWith.tag == "Poison" ){
+                score -= 100;
+            }
+
 
             // Convert the score back to a string and display it
             Text.text = score.ToString();

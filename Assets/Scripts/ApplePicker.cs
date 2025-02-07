@@ -15,14 +15,23 @@ public class ApplePicker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        basketList = new List<GameObject>();
-        for (int i=0; i<numBaskets; i++) {
-            GameObject tBasketGO = Instantiate<GameObject>( basketPrefab );
-            Vector3 pos = Vector3.zero;
-            pos.y = basketBottomY + ( basketSpacingY * i );
-            tBasketGO.transform.position = pos;
-            basketList.Add( tBasketGO );
-        }
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        // Creates baskets
+         if ( currentSceneName == "_Scene_0"){
+             basketList = new List<GameObject>();
+                for (int i=0; i<numBaskets; i++) {
+
+                 GameObject tBasketGO = Instantiate<GameObject>( basketPrefab );
+
+                 Vector3 pos = Vector3.zero;
+
+                  pos.y = basketBottomY + ( basketSpacingY * i );
+
+                 tBasketGO.transform.position = pos;
+                 
+                 basketList.Add( tBasketGO );}
+         }
     }
 
     public void AppleDestroyed() {

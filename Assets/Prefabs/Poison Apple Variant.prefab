@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poison Apple Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6619256239302667367, guid: 6233fee068bb3e345aea3dcedce6e5af, type: 3}
+      propertyPath: m_TagString
+      value: Poison
+      objectReference: {fileID: 0}
     - target: {fileID: 6967826880262973950, guid: 6233fee068bb3e345aea3dcedce6e5af, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.04
