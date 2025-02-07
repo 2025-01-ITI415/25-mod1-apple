@@ -12,44 +12,47 @@ public class ApplePicker : MonoBehaviour
     public float basketSpacingY = 2f;
     public List<GameObject> basketList;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         basketList = new List<GameObject>();
-        for (int i=0; i <numBaskets; i++) {
-            GameObject tBasketGO = Instantiate<GameObject>( basketPrefab );
+        for (int i=0; i < numBaskets; i++) {
+            GameObject tBasketGO = Instantiate<GameObject>(basketPrefab);
             Vector3 pos = Vector3.zero;
-            pos.y = basketBottomY + ( basketSpacingY * i );
+            pos.y = basketBottomY + (basketSpacingY * i);
             tBasketGO.transform.position = pos;
-            basketList.Add( tBasketGO );
+            basketList.Add(tBasketGO);
         }
     }
 
     public void AppleMissed() {
-        GameObject[] appleArray=GameObject.FindGameObjectsWithTag("Apple");
-        foreach ( GameObject tempGO in appleArray ) {
-            Destroy( tempGO );
-        }
+   
 
-        GameObject[] goldApples = GameObject.FindGameObjectsWithTag("Gold Apple");
-        foreach (GameObject tempGO in goldApples)
-        {
+        // Destroy all apples
+        GameObject[] appleArray = GameObject.FindGameObjectsWithTag("Apple");
+        foreach (GameObject tempGO in appleArray) {
             Destroy(tempGO);
         }
 
-        int basketIndex = basketList.Count -1;
+        // Destroy all gold apples
+        GameObject[] goldApples = GameObject.FindGameObjectsWithTag("Gold Apple");
+        foreach (GameObject tempGO in goldApples) {
+            Destroy(tempGO);
+        }
+
+        // Remove and destroy last basket
+        int basketIndex = basketList.Count - 1;
         GameObject basketGO = basketList[basketIndex];
-        basketList.RemoveAt( basketIndex );
-        Destroy( basketGO );
-        if ( basketList.Count == 0 ) {
-            SceneManager.LoadScene( "_Scene_0" );
+        basketList.RemoveAt(basketIndex);
+        Destroy(basketGO);
+
+        // Check if game should end
+        if (basketList.Count == 0) {
+            SceneManager.LoadScene("Scene1");
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Empty for now
     }
 }

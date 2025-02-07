@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Apple : MonoBehaviour
 {
     public static float bottomY = -20f;
 
-    // Update is called once per frame
     void Update()
     {
-        if ( transform.position.y < bottomY ) {
-            Destroy( this.gameObject );
-            ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
-            apScript.AppleMissed();
+        if (transform.position.y < bottomY) {
+            Destroy(this.gameObject);
+            
+            // Add null check for Camera.main
+            if (Camera.main != null) {
+                ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
+                if (apScript != null) {
+                    apScript.AppleMissed();
+                }
+            }
         }
     }
 }
