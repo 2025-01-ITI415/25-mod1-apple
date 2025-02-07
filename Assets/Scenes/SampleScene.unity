@@ -439,19 +439,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5199910174192557716, guid: bee129af351829b4387ed28f22a01173, type: 3}
       propertyPath: speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5199910174192557716, guid: bee129af351829b4387ed28f22a01173, type: 3}
-      propertyPath: applePrefab
-      value: 
-      objectReference: {fileID: 5142037085484354173, guid: 295949f2ce728f847a610962dae674be, type: 3}
-    - target: {fileID: 5199910174192557716, guid: bee129af351829b4387ed28f22a01173, type: 3}
-      propertyPath: leftAndRightEdge
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5199910174192557716, guid: bee129af351829b4387ed28f22a01173, type: 3}
-      propertyPath: chanceToChangeDirections
-      value: 0.02
+      propertyPath: secondsBetweenAppleDrops
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
