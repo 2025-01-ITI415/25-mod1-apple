@@ -3,7 +3,15 @@
  using UnityEngine;
 
  public class Basket : MonoBehaviour {
-     void Start () {} // We’ll add code to Start() in Code Listing 29.12
+    public ScoreCounter scoreCounter; 
+    
+    void Start () {
+// Find a GameObject named ScoreCounter in the Scene Hierarchy
+         GameObject scoreGO = GameObject.Find( "ScoreCounter" );         // b
+         // Get the ScoreCounter (Script) component of scoreGO
+         scoreCounter = scoreGO.GetComponent<ScoreCounter>(); 
+
+     } // We’ll add code to Start() in Code Listing 29.12
 
      void Update () {
          // Get the current screen position of the mouse from Input
@@ -27,6 +35,9 @@
          GameObject collidedWith = coll.gameObject;                        // b
          if ( collidedWith.CompareTag("Apple") ) {                         // c
              Destroy( collidedWith );
+             // Increase the score
+             scoreCounter.score += 10;
+             HighScore.TRY_SET_HIGH_SCORE( scoreCounter.score );
          }
      }
  }
