@@ -47,7 +47,7 @@
          if ( resetHighScoreNow ) {
             resetHighScoreNow = false;
              PlayerPrefs.SetInt( "HighScore", 0 );
-             Debug.LogWarning( "PlayerPrefs HighScore reset to 1,000." );
+             Debug.LogWarning( "PlayerPrefs HighScore reset to 0." );
          }        
      }
  }
