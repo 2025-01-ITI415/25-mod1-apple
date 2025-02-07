@@ -23,27 +23,33 @@ public class ApplePicker : MonoBehaviour
             basketList.Add( tBasketGO );
         }
     }
-    public void AppleMissed()
+    public void AppleMissed(GameObject missedApple)
     {
+        if(missedApple.CompareTag("PoisonApple"))
+        {
+            Destroy( missedApple );
+            return;
+        }
         GameObject[] appleArray = GameObject.FindGameObjectsWithTag("Apple");
         GameObject[] goldApples = GameObject.FindGameObjectsWithTag("GoldenApple");
-
 
         foreach (GameObject tempGo in appleArray)
             {
                 Destroy(tempGo);
             }
+        foreach (GameObject tempGo in goldApples)
+        {
+            Destroy(tempGo);
+        }
+        
         int basketIndex = basketList.Count - 1;
         GameObject basketGO = basketList[basketIndex];
         basketList.RemoveAt(basketIndex);
         Destroy(basketGO);
+        
         if (basketList.Count == 0)
         {
             SceneManager.LoadScene("_Scene_0");
         }
-    }
-    // Update is called once per frame
-    void Update(){
-        
     }
 }

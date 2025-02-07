@@ -9,6 +9,7 @@ public class AppleTree : MonoBehaviour
     // Prefab for instantiating apples
     public GameObject applePrefab;
     public GameObject goldenapplePrefab;
+    public GameObject poisonapplePrefab;
 
     //Speed at which the AppleTree moves
     public float speed = 1f;
@@ -21,7 +22,8 @@ public class AppleTree : MonoBehaviour
 
     // Rate at which Apples will be instantiated
     public float appleDropDelay  = 1f;
-    public float goldenAppleChance = 1f; // 10% chance for Golden Apple
+    public float goldenAppleChance = .1f; // 10% chance for Golden Apple
+    public float poisonAppleChance = .05f; // 5% chance for Poison Apple
 
 
     // Start is called before the first frame update
@@ -33,7 +35,20 @@ public class AppleTree : MonoBehaviour
     }
 
     void DropApple(){
-        GameObject appleToSpawn = (Random.value < goldenAppleChance) ? goldenapplePrefab : applePrefab;
+        //GameObject appleToSpawn = (Random.value < goldenAppleChance) ? goldenapplePrefab : applePrefab;
+        GameObject appleToSpawn;
+        float randomValue = Random.value;
+        if (randomValue < poisonAppleChance){
+            appleToSpawn = poisonapplePrefab;  // 5% chance for poison apple
+        }
+        else if (randomValue < poisonAppleChance + goldenAppleChance)
+        {
+            appleToSpawn = goldenapplePrefab;  // 10% chance for golden apple
+        }
+        else
+        {
+            appleToSpawn = applePrefab;        // Otherwise, spawn a regular apple
+        }
 
         GameObject apple = Instantiate(appleToSpawn);
         apple.transform.position = transform.position;

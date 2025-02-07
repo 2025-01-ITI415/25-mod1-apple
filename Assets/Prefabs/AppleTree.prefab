@@ -1143,11 +1143,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applePrefab: {fileID: 1407679720773423289, guid: ec7a79ba6cecdab4883f2eb099c7b59b, type: 3}
   goldenapplePrefab: {fileID: 895345755275772175, guid: 47ca51fdb7eec694bad6cb898e728a92, type: 3}
+  poisonapplePrefab: {fileID: 6255445037775409591, guid: a946d192e7655bb4f9e377e01f8b8a5e, type: 3}
   speed: 1
   leftAndRightEdge: 15
   chanceToChangeDirection: 0.01
   appleDropDelay: 1
-  goldenAppleChance: 1
+  goldenAppleChance: 0.1
+  poisonAppleChance: 0.05
 --- !u!1 &6395518552047491928
 GameObject:
   m_ObjectHideFlags: 0
