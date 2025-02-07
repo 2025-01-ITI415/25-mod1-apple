@@ -20,6 +20,7 @@ public class AppleTree : MonoBehaviour
 
     // Seconds between Apples instantiations
     public float appleDropDelay = 1f;
+    public float goldenappleDropDelay = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class AppleTree : MonoBehaviour
         Invoke("DropApple", appleDropDelay);
 
         GameObject Goldenapple = Instantiate<GameObject>(goldenapplePrefab);
-        apple.transform.position = transform.position;
+        Goldenapple.transform.position = transform.position;
         Invoke("DropApple", goldenappleDropDelay);
     }
 
