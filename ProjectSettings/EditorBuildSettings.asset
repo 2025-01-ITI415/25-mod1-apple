@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/StartScreen.unity
+    guid: bbe69384af927a141a73ef4a2feed418
+  - enabled: 1
+    path: Assets/apple pickers base game.unity
+    guid: 6776884953fc1b747986b6a867e23849
   m_configObjects: {}
