@@ -150,7 +150,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -424,6 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basketPrefab: {fileID: 5803503240869802852, guid: 21f615f75206b3f41a71c4c2c2ee796d, type: 3}
+  GameOverScreenPrefab: {fileID: 8812724333031551309, guid: b75621129074a39449c068b93ea5c3bf, type: 3}
   numBaskets: 3
   basketBottomY: -14
   basketSpacingY: 2
@@ -847,11 +848,68 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: -5.7, y: -5.3, z: -0.5}
-  m_LocalScale: {x: 6.0866504, y: 5.4868402, z: 3.5751257}
+  m_LocalScale: {x: 6.172472, y: 5.564204, z: 3.6255348}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
+--- !u!1001 &6111408930963954309
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2498118624048659141, guid: ead60e3c533c8854183893390bbe9575, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498118624048659141, guid: ead60e3c533c8854183893390bbe9575, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -15.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498118624048659141, guid: ead60e3c533c8854183893390bbe9575, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498118624048659141, guid: ead60e3c533c8854183893390bbe9575, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498118624048659141, guid: ead60e3c533c8854183893390bbe9575, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498118624048659141, guid: ead60e3c533c8854183893390bbe9575, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498118624048659141, guid: ead60e3c533c8854183893390bbe9575, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498118624048659141, guid: ead60e3c533c8854183893390bbe9575, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498118624048659141, guid: ead60e3c533c8854183893390bbe9575, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498118624048659141, guid: ead60e3c533c8854183893390bbe9575, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674290907485514017, guid: ead60e3c533c8854183893390bbe9575, type: 3}
+      propertyPath: m_Name
+      value: miku sprite
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ead60e3c533c8854183893390bbe9575, type: 3}
 --- !u!1001 &8546757202445857157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -874,11 +932,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 561026428819356456, guid: 1c8db13fa09eb044f8c8fe14d70b1bd5, type: 3}
       propertyPath: chanceforGolden
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 561026428819356456, guid: 1c8db13fa09eb044f8c8fe14d70b1bd5, type: 3}
       propertyPath: chanceforPoison
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 561026428819356456, guid: 1c8db13fa09eb044f8c8fe14d70b1bd5, type: 3}
       propertyPath: leftAndRightEdge
@@ -892,6 +950,10 @@ PrefabInstance:
       propertyPath: poisonApplePrefab
       value: 
       objectReference: {fileID: 5446872147140112318, guid: 73be6961665156c4a84b173b3cba286a, type: 3}
+    - target: {fileID: 561026428819356456, guid: 1c8db13fa09eb044f8c8fe14d70b1bd5, type: 3}
+      propertyPath: GameOverScreenPrefab
+      value: 
+      objectReference: {fileID: 8812724333031551309, guid: b75621129074a39449c068b93ea5c3bf, type: 3}
     - target: {fileID: 561026428819356456, guid: 1c8db13fa09eb044f8c8fe14d70b1bd5, type: 3}
       propertyPath: chanceToChangeDirections
       value: 0.02
@@ -963,3 +1025,4 @@ SceneRoots:
   - {fileID: 1174116304}
   - {fileID: 1179149491}
   - {fileID: 2078998435}
+  - {fileID: 6111408930963954309}

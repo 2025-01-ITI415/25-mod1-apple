@@ -7,6 +7,7 @@ public class ApplePicker : MonoBehaviour
 {
     [Header("Set in Inspector")]
     public GameObject       basketPrefab;
+    public GameObject       GameOverScreenPrefab;
     public int              numBaskets = 3;
     public float            basketBottomY = -14;
     public float            basketSpacingY = 2f;
@@ -17,7 +18,7 @@ public class ApplePicker : MonoBehaviour
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
 
-        // Creates baskets
+        // Creates baskets once on scene_0
          if ( currentSceneName == "_Scene_0"){
              basketList = new List<GameObject>();
                 for (int i=0; i<numBaskets; i++) {
@@ -37,24 +38,27 @@ public class ApplePicker : MonoBehaviour
     public void AppleDestroyed() {
         // Destroy all of the falling apples
         GameObject[] tAppleArray = GameObject.FindGameObjectsWithTag("Apple");
+        GameObject [] pAppleArray = GameObject.FindGameObjectsWithTag("Poison");
         foreach ( GameObject tGO in tAppleArray ){
+            if ( pAppleArray == null ){
             Destroy( tGO );
-        }
+        }}
 
         // Destroying one of the baskets
-        // Get the index of the Last Basket in basketList
+         // Get the index of the Last Basket in basketList
         int basketIndex = basketList.Count-1;
 
         // Get a reference to that Basket GameObject
         GameObject tBasketGO = basketList[basketIndex];
 
         // Remove the Basket from the List and destroy the GameObject
-        basketList.RemoveAt( basketIndex );
-        Destroy( tBasketGO );
+             basketList.RemoveAt( basketIndex );
+             Destroy( tBasketGO );
 
         // If there are no Baskets Let, restart the game
         if ( basketList.Count == 0 ){
-            SceneManager.LoadScene( "_Scene_0");
+            GameObject gameover = Instantiate(GameOverScreenPrefab);
+            // SceneManager.LoadScene( "_Scene_0");
         }
     }
 }

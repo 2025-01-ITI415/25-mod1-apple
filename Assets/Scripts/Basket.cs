@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
+using TMPro; // bozo tax for not using legacy text
 
 public class Basket : MonoBehaviour
 {
     [Header("Set Dynamically")]
     public TextMeshProUGUI     Text;
     
-    // Start is called before the first frame update
+    // Calls score UI
     void Start()
     {
         // Find a reference to the ScoreCounter
@@ -25,10 +25,7 @@ public class Basket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {       
-        // added line of script calling the unityengine.scenemanagement
-        // which notices once the game swaps to _scene_0 to then have the 
-        // baskets move along with the cursor. this avoids the basket moving
-        // on the title screen!
+        // notices once game alternates to scene_0
        if ( SceneManager.GetActiveScene().name == "_Scene_0" ){
         // Get the current screen psotion of the mouse from Input
         Vector3 mousePos2D = Input.mousePosition;
@@ -45,6 +42,8 @@ public class Basket : MonoBehaviour
          this.transform.position = pos; }
          }
 
+
+    // Collision & Score Keeping
     void OnCollisionEnter ( Collision coll ) {
         // Find out what hit this basket
         GameObject collidedWith = coll.gameObject;
@@ -54,7 +53,7 @@ public class Basket : MonoBehaviour
             // parse the text of scoreGT into an int
             int score = int.Parse( Text.text );
 
-            // Add points for catching the apple
+            // Add points for catching the apple of each type
             if ( collidedWith.tag == "Apple" ){
               score += 100;
             } else if ( collidedWith.tag == "Golden" ){

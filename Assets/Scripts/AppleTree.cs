@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class AppleTree : MonoBehaviour
@@ -7,6 +9,7 @@ public class AppleTree : MonoBehaviour
     [Header("Set in Inspector")]
     // Prefab for instantiating apples + unique types
     public GameObject   applePrefab;
+    public GameObject   GameOverScreenPrefab;
     public GameObject   goldenApplePrefab;
     public GameObject   poisonApplePrefab;
 
@@ -33,33 +36,32 @@ public class AppleTree : MonoBehaviour
 
     void DropApple() { 
 
-    AppleType();
-        
     Invoke( "DropApple", secondsBetweenAppleDrops);
+
+    AppleType();
+
     }
 
-    // creating a method for noticing apple types and giving them random chance of dropping
     void AppleType(){
     
-    float randomValue = Random.value;
-    
-    // checks to see if the randomly assigned value is less than poison apple chance
-    if ( Random.value < chanceforPoison ) {
-        // instantiates apple and transforms using code initally assigned to dropapple()
-        GameObject posionApple = Instantiate(poisonApplePrefab);
-        poisonApplePrefab.transform.position = transform.position;
-    
-    // checks to see if the randomly assigned value is less than the golden apple + poison apple chance
-    } else if ( Random.value < chanceforPoison + chanceforGolden ) {
-        GameObject goldenapple = Instantiate(goldenApplePrefab);
-        goldenApplePrefab.transform.position = transform.position;
-
-    // this is checking for any value greater than the previous chance, which should be
-    // regular apple
-    } else {
-        GameObject apple = Instantiate(applePrefab);
-        applePrefab.transform.position = transform.position;
-    }
+        float randomValue = Random.value;
+        
+        // checks to see if the randomly assigned value is less than poison apple chance
+        if ( Random.value < chanceforPoison ) {
+            // instantiates apple and transforms using code initally assigned to dropapple()
+            GameObject posionApple = Instantiate(poisonApplePrefab);
+            poisonApplePrefab.transform.position = transform.position;
+        
+        // checks to see if the randomly assigned value is less than the golden apple + poison apple chance
+        } else if ( Random.value < chanceforPoison + chanceforGolden ) {
+            GameObject goldenapple = Instantiate(goldenApplePrefab);
+            goldenApplePrefab.transform.position = transform.position;
+        // this is checking for any value greater than the previous chance, which should be
+        // regular apple
+        } else {
+            GameObject apple = Instantiate(applePrefab);
+            applePrefab.transform.position = transform.position;
+        }
     }
 
     // Update is called once per frame
