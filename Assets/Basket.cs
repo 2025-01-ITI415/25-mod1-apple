@@ -26,7 +26,7 @@ public class Basket : MonoBehaviour
     { 
      GameObject collidedWith = coll.gameObject; 
         if (collidedWith.CompareTag("Apple"))
-        {                         // c
+        {                         
             Destroy(collidedWith);
             scoreCounter.score += 100;
             HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
