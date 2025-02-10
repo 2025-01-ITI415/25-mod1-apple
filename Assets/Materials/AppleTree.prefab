@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 733438534309020973}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applePrefab: {fileID: 3536110908951866359, guid: b1d10bc0b4bc8e441815ae3d6823b16d, type: 3}
-  speed: 10
+  speed: 20
   leftAndRightEdge: 24
   changeDirChance: 0.02
   appleDropDelay: 1
@@ -214,7 +214,7 @@ Transform:
   m_GameObject: {fileID: 5098793468383898752}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalPosition: {x: 0, y: 1.07, z: 0}
   m_LocalScale: {x: 3, y: 2, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
