@@ -7,6 +7,6 @@ public class StartGame : MonoBehaviour
     public void OnStartButtonClicked()
     {
         // Load the main game Scene 
-        SceneManager.LoadScene("MainGameScene"); // Replace "MainGameScene"
+        SceneManager.LoadScene("apple pickers base game"); // Replace "MainGameScene"
     }
 }
