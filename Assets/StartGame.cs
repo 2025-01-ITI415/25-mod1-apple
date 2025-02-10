@@ -1,0 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class StartGame : MonoBehaviour
+{
+ public void StartTheGame() {
+        SceneManager.LoadScene("_Scene_0/SampleScene"); // Replace with your main scene's name
+    }
+}   
