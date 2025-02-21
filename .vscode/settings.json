@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "mod1-applepicker-25-mod1-apple.sln"
+    "dotnet.defaultSolution": "25-mod1-apple.sln"
 }
